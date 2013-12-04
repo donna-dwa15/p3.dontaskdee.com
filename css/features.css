@@ -1,0 +1,140 @@
+#title-tool {
+	font:16px arial;
+}
+
+.backgrounds {
+	height:40px;
+	width:40px;
+	position:relative;
+	float:left;
+	border:1px solid;
+	margin-left:10px;
+	cursor:pointer;
+	background-size:40px 40px;
+}
+
+.characters {
+	height:150px;
+	width:80px;
+	position:relative;
+	float:left;
+	margin-left:10px;
+	cursor:pointer;
+	background-size:80px 150px;
+}
+
+.characters-clone {
+	height:175px;
+	width:100px;
+	position:absolute;
+	float:left;
+	cursor:pointer;
+	z-index:-10;
+	background-size:100px 175px;
+}
+
+#thought-icon {
+	position:relative;
+	float:left;
+	width:116px;
+	height:68px;
+	background-position: 0px 0px;
+	background-image:url("../images/bubbles-selector.png");
+ }
+ 
+ #speech-icon {
+	position:relative;
+	float:left;
+	width:116px;
+	height:68px;
+	background-position: -116px 0px;
+	background-image:url("../images/bubbles-selector.png");
+ }
+
+#caption-icon {
+	position:relative;
+	float:left;
+	width:140px;
+	height:68px;
+	background-position: -232px 0px;
+	background-image:url("../images/bubbles-selector.png");
+}
+ 
+.balloons {
+	cursor:pointer;
+}
+
+#preview-area, .bubble-preview-span, #caption {
+	position:relative;
+	float:left;
+	margin-left:20px;
+}	
+
+#preview-area {
+	margin-top:-55px;
+	display:none;
+}
+
+.bubble-clone{
+	cursor:pointer;
+	position:absolute;
+	z-index:-5;
+}
+ 
+/* Pad and format text bubbles */
+#q1 {
+	display:inline-block;
+	word-break:break-all;
+	padding: 0px 3px;
+	width:145px;
+	white-space:pre-wrap;
+}
+
+#caption {
+	font:13px 'Walter Turncoat';
+	line-height:0.8;
+	text-transform:lowercase;
+	overflow:auto;
+	height:40px;
+}
+
+#character-1 {
+	background-image:url("../images/sleepingkitty.png");
+	height:100px;
+	width:170px;
+	background-size:170px 100px;
+}
+#character-2 {
+	background-image:url("../images/kittyback.png");
+	width:150px;
+	height:98px;
+	background-size:150px 98px;
+}
+#character-3 {
+	height:173px;
+	width:225px;
+	background-image:url("../images/angrykitty.png");
+	background-size:225px 173px;
+}
+#character-4 {
+	height:73px;
+	width:175px;
+	background-image:url("../images/walkingkitty.png");
+	background-size:175px 73px;
+}
+#character-5 {
+	height:120px;
+	width:170px;
+	background-image:url("../images/sittingkitty.png");
+	background-size:170px 120px;
+}
+
+#blank-bg {
+	background-image:url("../images/blank-bg.png");
+}
+#indoor-bg {
+	background-image:url("../images/bg1.png");
+}
+#outdoor-bg {
+	background-image:url("../images/bg2.png");	
+}
