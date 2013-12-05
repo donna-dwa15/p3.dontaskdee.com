@@ -70,6 +70,14 @@
 	margin-top:-55px;
 	display:none;
 	height:215px;
+	width:500px;
+}
+
+.flip-bubble {
+	position:relative;
+	float:left;
+	height:20px;
+	width:20px;
 }
 
 .bubble-clone{
@@ -181,4 +189,8 @@
 
 #outdoor-bg {
 	background-image:url("../images/bg2.png");	
+}
+
+#indoor-2-bg {
+	background-image:url("../images/xmas2-bg.png");	
 }
