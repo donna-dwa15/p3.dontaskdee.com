@@ -71,14 +71,15 @@ $(".comic-panels").droppable(
 	{ accept: '.characters, .bubble-preview-span'}, 
 	{drop: function(event,ui) { 
 		var new_clone = ui.draggable.clone();
+		
 		if(new_clone.hasClass('characters'))
 			new_clone.removeClass('characters').addClass('characters-clone').appendTo($(this));
 		if(new_clone.hasClass('bubble-preview-span'))
 			new_clone.removeClass('bubble-preview-span').addClass('bubble-clone').appendTo($(this));
+			
 		new_clone.draggable( {opacity:0.35} );
-		}
 	}
-);
+});
 
 //Flip character horizontally
 $('#flip-character').click(function(){
@@ -121,13 +122,17 @@ $('.balloons').click(function(){
 		preview_balloon = "bubble";
 	else if(chosen_balloon == "caption-icon")
 		preview_balloon = "caption-box";
-		
+
 	// Reset any current text in the preview box - both textarea and balloon
 	$('#caption').val("");
-	$('#q1').html("");
+	$('#bubble-text').html("");
 
 	$('#preview-area').show();
-	$('#q1').removeClass();
+	$('#bubble-text').removeClass();
+	
+	if(preview_balloon == "caption-box")
+		$('#bubble-text').addClass('caption-box-text');
+	
 	$('#bubble-preview').removeClass().addClass(preview_balloon);
 });
 
@@ -136,11 +141,11 @@ $('#flip-bubble').click(function(){
 	//Check if flip is already in effect, remove if it is
 	if($('#bubble-preview').hasClass('flip')){
 		$('#bubble-preview').removeClass('flip');
-		$('#q1').removeClass('flip');
+		$('#bubble-text').removeClass('flip');
 	}
 	else {
 		$('#bubble-preview').addClass('flip');
-		$('#q1').addClass('flip');
+		$('#bubble-text').addClass('flip');
 	}
 });
 
@@ -151,7 +156,7 @@ $('#caption').keyup(function(){
 	//replace certain characters so we have clean output - no funny script insertions
 	balloon_text = balloon_text.replace(/</g,"&#60;");
 
-	$('#q1').html(balloon_text);
+	$('#bubble-text').html(balloon_text);
 });
 
 /*-------------------------------------------------------------------------------------------------
