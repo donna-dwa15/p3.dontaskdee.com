@@ -48,12 +48,21 @@
 	<!-- End background picker -->
 	
 	<!-- Character tab for adding characters to comic -->
-	<div id="character-tool">     		<header><h2>Drag and Drop Characters to Panels</h2></header>
-		<div class="characters" id="character-1"></div>
-		<div class="characters" id="character-2"></div>
-		<div class="characters" id="character-3"></div>
-		<div class="characters" id="character-4"></div>
-		<div class="characters" id="character-5"></div>
+	<div id="character-tool">     		<!--header><h2>Drag and Drop Characters to Panels</h2></header-->
+		<header><h2>1. Click a Character to Preview and Edit</h2></header>
+		<div class="selectable-characters" id="character-icon-1"></div>
+		<div class="selectable-characters" id="character-icon-2"></div>
+		<div class="selectable-characters" id="character-icon-3"></div>
+		<div class="selectable-characters" id="character-icon-4"></div>
+		<div class="selectable-characters" id="character-icon-5"></div>
+		<!-- Area for previewing character before adding to strip -->
+		<div id="character-preview-area">
+			<header><h2 id="character-preview-header">2. Drag and Drop the Character to a Panel</h2></header>
+			<div id="character-preview" class="characters"></div>
+			<!-- Clickable icon to flip balloon horizontally -->
+			<span id="flip-character" class="ui-icon ui-icon-refresh" title="Flip"></span>
+			<br/>
+		</div>
 		<div class="clearfix"></div>
 	</div>
 	<!-- End Character tab/menu -->
@@ -84,7 +93,7 @@
 	
 	<!-- Print tab for printing out comic strip -->
 	<div id="print-tool">
-		<br/><br/>
+		<header><h2>Click to Open a Printable Copy</h2></header>
 		<button value="Print" id="print-btn">Print</button>
 	</div>
 	<!-- End print tab/menu -->
