@@ -62,7 +62,8 @@ $('.selectable-characters').click(function(){
 //make characters draggable
 $( ".characters" ).draggable(
 	{ revert: true },
-	{ helper: "clone" }
+	{ helper: "clone" },
+	{ opacity: 0.35 }
 );
 
 //Allow comic strip panels to accept characters and text balloons to be dragged over.
@@ -99,7 +100,8 @@ Note: panel droppable code is above in the "Character Tab menu events" section
 //Make thought/speech/caption balloons draggable
 $( ".bubble-preview-span" ).draggable(
 	{ revert: true },
-	{ helper: "clone" }
+	{ helper: "clone" },
+	{ opacity: 0.35}
 );
 
 //Add click event to selectable text balloons.  On click, the selected balloon will display in the preview area
