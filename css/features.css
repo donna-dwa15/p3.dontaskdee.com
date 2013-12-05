@@ -33,46 +33,43 @@
 	background-size:100px 175px;
 }
 
-#thought-icon {
+#thought-icon, #speech-icon, #caption-icon {
 	position:relative;
 	float:left;
-	width:116px;
 	height:68px;
-	background-position: 0px 0px;
 	background-image:url("../images/bubbles-selector.png");
+}
+
+#thought-icon {
+	width:116px;
+	background-position: 0px 0px;
+
  }
  
- #speech-icon {
-	position:relative;
-	float:left;
+#speech-icon {
 	width:116px;
-	height:68px;
 	background-position: -116px 0px;
-	background-image:url("../images/bubbles-selector.png");
  }
 
 #caption-icon {
-	position:relative;
-	float:left;
 	width:140px;
-	height:68px;
 	background-position: -232px 0px;
-	background-image:url("../images/bubbles-selector.png");
 }
  
 .balloons {
 	cursor:pointer;
 }
 
-#preview-area, .bubble-preview-span, #caption {
+#character-preview-area, .character-preview, #preview-area, .bubble-preview-span, #caption {
 	position:relative;
 	float:left;
 	margin-left:20px;
 }	
 
-#preview-area {
+#character-preview-area, #preview-area {
 	margin-top:-55px;
 	display:none;
+	height:215px;
 }
 
 .bubble-clone{
@@ -98,43 +95,85 @@
 	height:40px;
 }
 
-#character-1 {
-	background-image:url("../images/sleepingkitty.png");
+/* Character menu styles */
+
+#character-icon-1, #character-icon-2, #character-icon-3, #character-icon-4, #character-icon-5 {
+	position:relative;
+	float:left;
+	width:110px;
 	height:100px;
-	width:170px;
-	background-size:170px 100px;
+	background-image:url("../images/character-selector.png");
 }
-#character-2 {
-	background-image:url("../images/kittyback.png");
-	width:150px;
-	height:98px;
-	background-size:150px 98px;
+
+#character-icon-1 {	
+	background-position: 0px 0px;
 }
-#character-3 {
-	height:173px;
-	width:225px;
-	background-image:url("../images/angrykitty.png");
-	background-size:225px 173px;
+ 
+#character-icon-2 {
+	background-position: -110px 0px;
 }
-#character-4 {
-	height:73px;
-	width:175px;
-	background-image:url("../images/walkingkitty.png");
-	background-size:175px 73px;
+
+#character-icon-3 {
+	background-position: -220px 0px;
 }
-#character-5 {
+
+#character-icon-4 {
+	background-position: -330px 0px;
+}
+
+#character-icon-5 {
+	background-position: -440px 0px;
+}
+
+.selectable-characters {
+	cursor:pointer;
+}
+
+.character-1 {
 	height:120px;
 	width:170px;
 	background-image:url("../images/sittingkitty.png");
 	background-size:170px 120px;
 }
 
+.character-2 {
+	background-image:url("../images/kittyback.png");
+	width:150px;
+	height:98px;
+	background-size:150px 98px;
+}
+
+.character-3 {
+	background-image:url("../images/sleepingkitty.png");
+	height:100px;
+	width:170px;
+	background-size:170px 100px;
+}
+	
+.character-4 {
+	height:73px;
+	width:175px;
+	background-image:url("../images/walkingkitty.png");
+	background-size:175px 73px;
+}
+
+.character-5 {
+	height:173px;
+	width:225px;
+	background-image:url("../images/angrykitty.png");
+	background-size:225px 173px;
+}
+
+/* Background styles */
+
 #blank-bg {
 	background-image:url("../images/blank-bg.png");
 }
+
 #indoor-bg {
 	background-image:url("../images/bg1.png");
 }
+
 #outdoor-bg {
 	background-image:url("../images/bg2.png");	
 }
