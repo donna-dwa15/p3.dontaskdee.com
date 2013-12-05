@@ -65,7 +65,7 @@
 	position:relative;
 	float:left;
 	margin-left:20px;
-	zIndex:10;
+	z-index:10;
 }	
 
 #character-preview-area, #preview-area {
