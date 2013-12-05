@@ -79,7 +79,7 @@
 }
  
 /* Pad and format text bubbles */
-#q1 {
+#bubble-text {
 	display:inline-block;
 	word-break:break-all;
 	padding: 0px 3px;
@@ -93,6 +93,11 @@
 	text-transform:lowercase;
 	overflow:auto;
 	height:40px;
+}
+
+.caption-box-text {
+	width:200px;
+	margin-top:0px;
 }
 
 /* Character menu styles */
