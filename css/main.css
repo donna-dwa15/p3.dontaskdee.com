@@ -4,6 +4,7 @@ body {
 
 blockquote {
 	margin:0px 0px;
+	z-index:10;
 }
 
 h2 {
@@ -174,5 +175,6 @@ label {
 	text-transform:lowercase;
 	line-height:0.8;
 	cursor:pointer;
+	z-index:10;
 }
 
