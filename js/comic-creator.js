@@ -118,7 +118,12 @@ $('#flip-bubble').click(function(){
 
 //Update text in chosen text ballon in preview area
 $('#caption').keyup(function(){
-	$('#q1').html($(this).val());
+	var balloon_text = $(this).val();
+	
+	//replace certain characters so we have clean output - no funny script insertions
+	balloon_text = balloon_text.replace(/</g,"&#60;");
+
+	$('#q1').html(balloon_text);
 });
 
 /*-------------------------------------------------------------------------------------------------
