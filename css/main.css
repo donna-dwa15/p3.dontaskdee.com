@@ -101,14 +101,6 @@ label {
 	left: 30px;
 }
 
-/* style To flip an element horizontally */
-.flip {
-	-webkit-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-ms-transform: scaleX(-1);
-	-moz-transform: scaleX(-1);
-}
-
 .bubble:before {
 	content: '';
 	position: absolute;
@@ -167,6 +159,7 @@ label {
 	background: #FFFFFF;
 	border:2px solid #000000;
 	box-shadow: 1px 1px 1px #000000;
+	z-index:10;
 }
 
 .bubble, .thought-bubble, .caption-box {
@@ -178,3 +171,10 @@ label {
 	z-index:10;
 }
 
+/* style To flip an element horizontally */
+.flip {
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+}
