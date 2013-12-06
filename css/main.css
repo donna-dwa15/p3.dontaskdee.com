@@ -10,6 +10,11 @@ blockquote {
 	z-index:10;
 }
 
+h1 {
+	font:20px 'Walter Turncoat';
+	font-weight:bold;
+}
+
 h2 {
 	font:18px 'Walter Turncoat';
 	font-weight:bold;
@@ -208,11 +213,11 @@ Comic Text Menu styles
 
 #thought-icon {
 	background-position:0px 0px;
- }
+}
  
 #speech-icon {
 	background-position:-116px 0px;
- }
+}
 
 #caption-icon {
 	width:140px;
@@ -340,7 +345,7 @@ Comic Text Menu styles
 #bubble-text {
 	display:inline-block;
 	word-break:break-all;
-	padding: 0px 3px;
+	padding:0px 3px;
 	width:145px;
 	white-space:pre-wrap;
 }
