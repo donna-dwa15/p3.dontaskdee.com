@@ -17,12 +17,16 @@ Title Tab menu events
 -------------------------------------------------------------------------------------------------*/
 //Detect changes and update comic strip Title
 $('#title-text').keyup(function(){
-	$('#title').html($(this).val());
+	//replace certain characters so we have clean output - no funny script insertions
+	var title_text = $(this).val().replace(/</g,"&#60;");
+	$('#title').html(title_text);
 });
 
 //Detect changes and update comic strip author info
 $('#author-text').keyup(function(){
-	$('#author').html($(this).val());
+	//replace certain characters so we have clean output - no funny script insertions
+	var author_text = $(this).val().replace(/</g,"&#60;");
+	$('#author').html(author_text);
 });
 
 /*-------------------------------------------------------------------------------------------------
@@ -61,9 +65,9 @@ $('.selectable-characters').click(function(){
 
 //make characters draggable
 $( ".characters" ).draggable(
-	{ revert: true },
-	{ helper: "clone" },
-	{ opacity: 0.35 }
+	{ revert:"invalid" },
+	{ helper:"clone" },
+	{ opacity:0.35 }
 );
 
 //Allow comic strip panels to accept characters and text balloons to be dragged over.
@@ -77,8 +81,8 @@ $(".comic-panels").droppable(
 			new_clone.removeClass('characters').addClass('characters-clone').appendTo($(this));
 		if(new_clone.hasClass('bubble-preview-span'))
 			new_clone.removeClass('bubble-preview-span').addClass('bubble-clone').appendTo($(this));
-			
-		new_clone.draggable( {opacity:0.35} );
+		
+		new_clone.draggable( { opacity:0.35 } );
 	}
 });
 
@@ -99,7 +103,7 @@ Note: panel droppable code is above in the "Character Tab menu events" section
 -------------------------------------------------------------------------------------------------*/
 //Make thought/speech/caption balloons draggable
 $( ".bubble-preview-span" ).draggable(
-	{ revert: true },
+	{ revert:"invalid" },
 	{ helper: "clone" },
 	{ opacity: 0.35}
 );
@@ -153,10 +157,8 @@ $('#flip-bubble').click(function(){
 
 //Update text in chosen text ballon in preview area
 $('#caption').keyup(function(){
-	var balloon_text = $(this).val();
-
 	//replace certain characters so we have clean output - no funny script insertions
-	balloon_text = balloon_text.replace(/</g,"&#60;");
+	var balloon_text = $(this).val().replace(/</g,"&#60;");
 
 	$('#bubble-text').html(balloon_text);
 });
