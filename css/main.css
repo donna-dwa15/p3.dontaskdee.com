@@ -62,14 +62,14 @@ Comic Background Menu style
 -------------------------------------------------------------------------------------------------*/
 /* background selector icon style */
 .backgrounds {
-	height:40px;
-	width:40px;
 	position:relative;
 	float:left;
-	border:1px solid;
-	margin-left:10px;
 	cursor:pointer;
+	border:1px solid;
 	background-size:40px 40px;
+	margin-left:10px;
+	height:40px;
+	width:40px;
 }
 
 /* Individual Background option styles */
@@ -92,25 +92,25 @@ Comic Background Menu style
 /*-------------------------------------------------------------------------------------------------
 Comic Character Menu style 
 -------------------------------------------------------------------------------------------------*/
-.characters {
-	height:150px;
-	width:80px;
+.characters {	
 	position:relative;
 	float:left;
-	margin-left:10px;
 	cursor:pointer;
 	background-size:80px 150px;
+	margin-left:10px;
+	height:150px;
+	width:80px;
 	z-index:10;
 }
 
 .characters-clone {
-	height:175px;
-	width:100px;
 	position:absolute;
 	float:left;
 	cursor:pointer;
-	z-index:-10;
 	background-size:100px 175px;
+	height:175px;
+	width:100px;
+	z-index:-10;
 }
 
 /* General Selectable character icon styles */
@@ -199,6 +199,13 @@ Comic Character Menu style
 
 /*-------------------------------------------------------------------------------------------------
 Comic Text Menu styles
+
+Note: Bubble preview area styles is shared with character-preview under character menu styles
+
+Resources used in helping to get ideas on creating some of the text balloons:
+http://nicolasgallagher.com/pure-css-speech-bubbles/demo/
+http://www.ilikepixels.co.uk/drop/bubbler/
+http://css-tricks.com/examples/ShapesOfCSS/
 -------------------------------------------------------------------------------------------------*/
 
 /* Styles to display icons for selecting text balloons */
@@ -383,6 +390,7 @@ Comic strip area styles
 #panel-1, #panel-2, #panel-3 {
 	position:relative;
 	float:left;
+	display: inline-block;
 	border:3px solid;
 	height:300px;
 	width:300px;
