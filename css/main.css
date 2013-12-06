@@ -1,3 +1,6 @@
+/*-------------------------------------------------------------------------------------------------
+General page styles
+-------------------------------------------------------------------------------------------------*/
 body {
 	font:16px arial;
 }
@@ -21,43 +24,10 @@ label {
 	font-family:'Walter Turncoat';
 }
 
-.clearfix {
-	clear:both;
-}
+/*-------------------------------------------------------------------------------------------------
+Custom JQuery UI Tab menu styles
+-------------------------------------------------------------------------------------------------*/
 
-#comic-strip {
-	width:950px;
-}
-
-#copy {
-	font:15px arial;
-	text-align:right;
-	margin-right:10px;
-}
-
-#comic-title {
-	font:16px arial;
-	font-weight:bold;
-	margin-left:7px;
-	margin-top:10px;
-}
-
-#panel-1, #panel-2, #panel-3 {
-	border:3px solid;
-	height:300px;
-	width:300px;
-	margin-left:5px;
-	position:relative;
-	float:left;
-	z-index:0;
-	overflow:hidden;
-}
-
-#panel-2, #panel-3 {
-	margin-left:10px;
-}
-
-/* TABs menu styling */
 /* Set active tab styling */
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-tabs-active {
 	background-image:none;
@@ -71,110 +41,366 @@ label {
 #tab-items .ui-tabs-nav .ui-icon {
 	display: inline-block; 
 }
-/* End TABs menu styling */
 
-/* START STYLES FOR TEXT BUBBLES */
+/*-------------------------------------------------------------------------------------------------
+Start Specific menu styles
+-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+Comic Title Menu style
+-------------------------------------------------------------------------------------------------*/
+#title-tool {
+	font:16px arial;
+}
 
+/*-------------------------------------------------------------------------------------------------
+Comic Background Menu style 
+-------------------------------------------------------------------------------------------------*/
+/* background selector icon style */
+.backgrounds {
+	height:40px;
+	width:40px;
+	position:relative;
+	float:left;
+	border:1px solid;
+	margin-left:10px;
+	cursor:pointer;
+	background-size:40px 40px;
+}
+
+/* Individual Background option styles */
+#blank-bg {
+	background-image:url("../images/blank-bg.png");
+}
+
+#indoor-bg {
+	background-image:url("../images/bg1.png");
+}
+
+#outdoor-bg {
+	background-image:url("../images/bg2.png");	
+}
+
+#indoor-2-bg {
+	background-image:url("../images/xmas2-bg.png");	
+}
+
+/*-------------------------------------------------------------------------------------------------
+Comic Character Menu style 
+-------------------------------------------------------------------------------------------------*/
+.characters {
+	height:150px;
+	width:80px;
+	position:relative;
+	float:left;
+	margin-left:10px;
+	cursor:pointer;
+	background-size:80px 150px;
+	z-index:10;
+}
+
+.characters-clone {
+	height:175px;
+	width:100px;
+	position:absolute;
+	float:left;
+	cursor:pointer;
+	z-index:-10;
+	background-size:100px 175px;
+}
+
+/* General Selectable character icon styles */
+#character-icon-1, #character-icon-2, #character-icon-3, #character-icon-4, #character-icon-5 {
+	position:relative;
+	float:left;
+	width:110px;
+	height:100px;
+	background-image:url("../images/character-selector.png");
+}
+/* Display only specific portion of image for icon 1, icon 2, icon 3, etc.. */
+#character-icon-1 {	
+	background-position:0px 0px;
+}
+ 
+#character-icon-2 {
+	background-position:-110px 0px;
+}
+
+#character-icon-3 {
+	background-position:-220px 0px;
+}
+
+#character-icon-4 {
+	background-position:-330px 0px;
+}
+
+#character-icon-5 {
+	background-position:-440px 0px;
+}
+
+.selectable-characters {
+	cursor:pointer;
+}
+
+/* Individual characters for draggable/droppable functionality */
+.character-1 {
+	height:120px;
+	width:170px;
+	background-image:url("../images/sittingkitty.png");
+	background-size:170px 120px;
+}
+
+.character-2 {
+	background-image:url("../images/kittyback.png");
+	width:150px;
+	height:98px;
+	background-size:150px 98px;
+}
+
+.character-3 {
+	background-image:url("../images/sleepingkitty.png");
+	height:100px;
+	width:170px;
+	background-size:170px 100px;
+}
+	
+.character-4 {
+	height:73px;
+	width:175px;
+	background-image:url("../images/walkingkitty.png");
+	background-size:175px 73px;
+}
+
+.character-5 {
+	height:173px;
+	width:225px;
+	background-image:url("../images/angrykitty.png");
+	background-size:225px 173px;
+}
+
+/* Preview area of character menu */
+#character-preview-area, .character-preview, #preview-area, .bubble-preview-span, #caption {
+	position:relative;
+	float:left;
+	margin-left:20px;
+	z-index:10;
+}	
+
+#character-preview-area, #preview-area {
+	margin-top:-55px;
+	display:none;
+	height:215px;
+	width:500px;
+}
+
+/*-------------------------------------------------------------------------------------------------
+Comic Text Menu styles
+-------------------------------------------------------------------------------------------------*/
+
+/* Styles to display icons for selecting text balloons */
+#thought-icon, #speech-icon, #caption-icon {
+	cursor:pointer;
+	position:relative;
+	float:left;
+	width:116px;
+	height:68px;
+	background-image:url("../images/bubbles-selector.png");
+}
+
+#thought-icon {
+	background-position:0px 0px;
+ }
+ 
+#speech-icon {
+	background-position:-116px 0px;
+ }
+
+#caption-icon {
+	width:140px;
+	background-position:-232px 0px;
+}
+
+/* Style for flipping balloons horizontaly icon */
+.flip-bubble {
+	position:relative;
+	float:left;
+	height:20px;
+	width:20px;
+}
+
+/* START STYLES FOR CREATING TEXT BALLOONS TO BE USED IN COMIC STRIP */
 .bubble, .thought-bubble {
-	position: relative;
-	width: 165px;/*150px;*/
-	height: 75px;/*60px;*/
-	padding: 0px 3px 3px 3px;
-	background: #FFFFFF;
-	-moz-border-radius: 90px / 40px;
-	-webkit-border-radius: 90px / 40px;
-	border-radius: 90px / 40px;
-	border: #000000 solid 2px;
+	position:relative;
+	background:#FFFFFF;
+	border:#000000 solid 2px;
+	border-radius:90px / 40px;
+	-moz-border-radius:90px / 40px;
+	-webkit-border-radius:90px / 40px;
+	padding:0px 3px 3px 3px;
+	width:165px;
+	height:75px;
 }
 
 .bubble:after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 15px 6px 0;
-	border-color: #FFFFFF transparent;
-	display: block;
-	width: 0;
-	height:0;
-	z-index: 3;
-	bottom: -4px;
-	left: 30px;
+	content:'';
+	position:absolute;
+	display:block;
+	border-color:#FFFFFF transparent;
+	border-style:solid;
+	border-width:15px 6px 0;
+	bottom:-4px;
+	left:30px;
+	width:0px;
+	height:0px;
+	z-index:3;
 }
 
 .bubble:before {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 15px 8px 0;
-	border-color: #000000 transparent;
-	display: block;
-	width: 0;
-	height:0;
-	z-index: 2;
-	bottom: -5px;/*-11px;*/
-	left: 28px;
+	content:'';
+	position:absolute;
+	display:block;
+	border-color:#000000 transparent;
+	border-style:solid;
+	border-width:15px 8px 0;
+	width:0px;
+	height:0px;
+	bottom:-5px;
+	left:28px;
+	z-index:2;
 }
 
-/*smaller bubble*/
+/* smaller bubble of thought bubble*/
 .thought-bubble:after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #000000;
-	background-color: #FFFFFF;
-	display: block;
-	z-index: 1;
+	content:'';
+	position:absolute;
+	display:block;
+	background-color:#FFFFFF;
+	border-color:#000000;
+	border-radius:20px;
+	border-style:solid;
+	border-width:2px;
 	bottom:-30px; 
-	left:20px;/* 5px*/ 
-	/*width:10px; 
-	height:10px;*/
+	left:20px;
 	width:5px;
 	height:5px;
-	border-radius:20px;
+	z-index:1;
 }
 
-/*medium bubble*/
+/* medium bubble of thought bubble */
 .thought-bubble:before {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #000000;
+	content:'';
+	position:absolute;
+	display:block;
 	background-color:#FFFFFF;
-	display: block;
-	z-index: 10;
-	bottom: -15px;/*-20px;*/
-	left: 15px; 
-	/*width:20px; 
-	height:20px;*/
+	border-color:#000000;
+	border-radius:20px;
+	border-style:solid;
+	border-width:2px;
+	bottom:-15px;
+	left:15px; 
 	width:10px;
 	height:10px;
-	border-radius:20px;
+	z-index:10;
 }
 
 .caption-box {
-	width: 225px;
-	height: 45px;
-	background: #FFFFFF;
+	background:#FFFFFF;
 	border:2px solid #000000;
-	box-shadow: 1px 1px 1px #000000;
+	box-shadow:1px 1px 1px #000000;
+	width:225px;
+	height:45px;
 	z-index:10;
 }
 
-.bubble, .thought-bubble, .caption-box {
-	text-align:center;
-	font:15px 'Walter Turncoat';
-	text-transform:lowercase;
-	line-height:0.8;
+.bubble, .caption-box, .thought-bubble {
 	cursor:pointer;
+	font:15px 'Walter Turncoat';
+	line-height:0.8;
+	text-align:center;
+	text-transform:lowercase;
 	z-index:10;
+}
+
+/* Style add-on for balloons placed in the comic panels */
+.bubble-clone{
+	cursor:pointer;
+	position:absolute;
+	z-index:-5;
+}
+
+/* Style for text area to input text for bubbles */
+#caption {
+	font:13px 'Walter Turncoat';
+	line-height:0.8;
+	text-transform:lowercase;
+	height:40px;
+	overflow:auto;
+}
+
+/* Pad and format text in bubbles */
+#bubble-text {
+	display:inline-block;
+	word-break:break-all;
+	padding: 0px 3px;
+	width:145px;
+	white-space:pre-wrap;
+}
+
+.caption-box-text {
+	margin-top:0px;
+	width:200px;
+}
+
+/*-------------------------------------------------------------------------------------------------
+End Menu and menu content styles
+-------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------
+Comic strip area styles
+-------------------------------------------------------------------------------------------------*/
+
+#comic-title {
+	font:16px arial;
+	font-weight:bold;
+	margin-left:7px;
+	margin-top:10px;
+}
+
+#comic-strip {
+	width:950px;
+}
+
+#copy {
+	font:15px arial;
+	text-align:right;
+	margin-right:10px;
+}
+
+#panel-1, #panel-2, #panel-3 {
+	position:relative;
+	float:left;
+	border:3px solid;
+	height:300px;
+	width:300px;
+	margin-left:5px;	
+	z-index:0;
+	overflow:hidden;
+}
+
+#panel-2, #panel-3 {
+	margin-left:10px;
+}
+
+/*-------------------------------------------------------------------------------------------------
+General helper styles
+-------------------------------------------------------------------------------------------------*/
+.clearfix {
+	clear:both;
 }
 
 /* style To flip an element horizontally */
 .flip {
-	-webkit-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-ms-transform: scaleX(-1);
-	-moz-transform: scaleX(-1);
+	-webkit-transform:scaleX(-1);
+	-o-transform:scaleX(-1);
+	-ms-transform:scaleX(-1);
+	-moz-transform:scaleX(-1);
 }
