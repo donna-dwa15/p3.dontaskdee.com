@@ -176,7 +176,6 @@ $('#print-btn').click(function() {
 	new_tab_contents += '<head>';
 	new_tab_contents += '<title>The Cat\'s Meow Comic Creator</title>';
 	new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">';
-	new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">';
 	new_tab_contents += '<link href="http://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet" type="text/css">';
 	new_tab_contents += '</head>';
 	new_tab_contents += '<body>'; 
